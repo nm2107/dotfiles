@@ -1,0 +1,11 @@
+---
+# @see https://flathub.org/apps/details/com.usebottles.bottles
+- name: Install bottles (playonlinux alike)
+  become: yes
+  flatpak:
+    name: com.usebottles.bottles
+    state: present
+    method: system
+  tags:
+    - install_bottles
+    - flatpak
