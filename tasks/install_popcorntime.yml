@@ -27,6 +27,7 @@
     src: "https://github.com/popcorn-official/popcorn-desktop/releases/download/v{{ popcorntime_version }}/Popcorn-Time-{{ popcorntime_version }}-linux64.zip"
     dest: "/usr/local/src/popcorntime"
     remote_src: yes
+    mode: "go+rX"
   when: install_popcorntime
   tags:
     - install_popcorntime
