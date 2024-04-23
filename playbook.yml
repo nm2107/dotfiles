@@ -45,6 +45,8 @@
     - import_tasks: tasks/configure_git.yml
     - import_tasks: tasks/mountpoints.yml
 
+    - import_tasks: tasks/enable_tuxedo_keyboard_backlight_kernel_module.yml
+
     - import_tasks: tasks/disable_unneeded_services.yml
     - import_tasks: tasks/configure_dnf.yml
     - import_tasks: tasks/remove_unneeded_packages.yml
@@ -80,7 +82,6 @@
     - import_tasks: tasks/install_popcorntime.yml
 
     - import_tasks: tasks/enable_xbox_controller_kernel_module.yml
-    - import_tasks: tasks/enable_tuxedo_keyboard_backlight_kernel_module.yml
 
     - import_tasks: tasks/configure_grub.yml
     - import_tasks: tasks/configure_journalctl.yml
