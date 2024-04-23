@@ -6,7 +6,6 @@
       "containernetworking-plugins",
       "podman",
       "podman-compose",
-      "podman-plugins",
     ]
     state: present
   when: install_podman | default(false)
