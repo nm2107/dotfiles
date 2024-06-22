@@ -32,6 +32,7 @@
         - install_php
         - install_podman
         - install_popcorntime
+        - install_printer_drivers
         - install_python_lsp
         - install_rust
         - install_terraform
@@ -70,6 +71,7 @@
     - import_tasks: tasks/configure_nvim.yml
 
     - import_tasks: tasks/enable_hardware_acceleration.yml
+    - import_tasks: tasks/install_printer_drivers.yml
     - import_tasks: tasks/install_gnome_deps.yml
     - import_tasks: tasks/install_graphical_apps.yml
 

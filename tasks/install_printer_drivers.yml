@@ -1,0 +1,9 @@
+---
+- name: Install printer drivers
+  become: yes
+  dnf:
+    name: "{{ printer_drivers | default([]) }}"
+    state: present
+    allowerasing: true
+  tags:
+    - install_printer_drivers

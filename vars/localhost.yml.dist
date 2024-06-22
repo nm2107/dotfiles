@@ -172,6 +172,10 @@ hardware_acceleration_packages: [
   "intel-media-driver",
 ]
 
+printer_drivers: [
+#  "epson-inkjet-printer-escpr",
+]
+
 ### Other switches
 
 install_daw: false
