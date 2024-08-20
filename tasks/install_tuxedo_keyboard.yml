@@ -1,0 +1,81 @@
+---
+# @see https://www.tuxedocomputers.com/en/Add-TUXEDO-software-package-sources.tuxedo
+- name: Enable tuxedo repo
+  become: yes
+  template:
+    src: ../templates/etc/yum.repos.d/tuxedo.repo.j2
+    dest: /etc/yum.repos.d/tuxedo.repo
+    mode: 0644
+    owner: root
+    group: root
+  when: install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
+
+- name: Install tuxedo-keyboard package (tuxedo-drivers)
+  become: yes
+  dnf:
+    name: [
+      "tuxedo-drivers",
+    ]
+    state: present
+  when: install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
+
+- name: Copy tuxedo configuration
+  become: yes
+  template:
+    src: ../templates/etc/modprobe.d/tuxedo_keyboard.conf.j2
+    dest: /etc/modprobe.d/tuxedo_keyboard.conf
+    mode: 0644
+    owner: root
+    group: root
+  when: install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
+
+
+- name: Load tuxedo kernel module on boot
+  become: yes
+  template:
+    src: ../templates/etc/modules-load.d/tuxedo_keyboard.conf.j2
+    dest: /etc/modules-load.d/tuxedo_keyboard.conf
+    mode: 0644
+    owner: root
+    group: root
+  when: install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
+
+- name: Disable tuxedo repo
+  become: yes
+  file:
+    path: /etc/yum.repos.d/tuxedo.repo
+    state: absent
+  when: not install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
+
+- name: Uninstall tuxedo-keyboard package (tuxedo-drivers)
+  become: yes
+  dnf:
+    name: [
+      "tuxedo-drivers",
+    ]
+    state: absent
+  when: not install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
+
+- name: Remove tuxedo keyboard config files
+  become: yes
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - /etc/modules-load.d/tuxedo_keyboard.conf
+    - /etc/modprobe.d/tuxedo_keyboard.conf
+  when: not install_tuxedo_keyboard
+  tags:
+    - install_tuxedo_keyboard
