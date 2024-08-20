@@ -17,7 +17,6 @@
         - disable_unneeded_services
         - dotfiles
         - enable_hardware_acceleration
-        - enable_tuxedo_keyboard_backlight_kernel_module
         - enable_xbox_controller_kernel_module
         - flatpak
         - flatpak_apps
@@ -36,6 +35,7 @@
         - install_python_lsp
         - install_rust
         - install_terraform
+        - install_tuxedo_keyboard
         - install_vagrant
         - install_yq
         - mountpoints
@@ -46,7 +46,7 @@
     - import_tasks: tasks/configure_git.yml
     - import_tasks: tasks/mountpoints.yml
 
-    - import_tasks: tasks/enable_tuxedo_keyboard_backlight_kernel_module.yml
+    - import_tasks: tasks/install_tuxedo_keyboard.yml
 
     - import_tasks: tasks/disable_unneeded_services.yml
     - import_tasks: tasks/configure_dnf.yml
