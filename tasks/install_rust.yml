@@ -9,6 +9,7 @@
       "rust-src",
       "rustfmt",
     ]
+    state: present
   when: install_rust
   tags:
     - install_rust
