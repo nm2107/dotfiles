@@ -26,6 +26,7 @@
       "qpwgraph",
     ]
     state: present
+    skip_broken: yes
   when: install_daw | default(false)
   tags:
     - install_daw
