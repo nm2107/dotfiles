@@ -73,6 +73,7 @@ cli_tools: [
   "gstreamer1",
   "gstreamer1-libav",
   "jq",
+  "libavcodec-freeworld",
   "make",
   "neovim",
   "nethogs",
