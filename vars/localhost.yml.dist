@@ -144,7 +144,7 @@ absent_flatpak_apps: [
   "com.sweethome3d.Sweethome3d",
   "net.pcsx2.PCSX2",
   "org.DolphinEmu.dolphin-emu",
-  "org.freecadweb.FreeCAD",
+  "org.freecad.FreeCAD",
   "org.libretro.RetroArch",
   "org.mixxx.Mixxx",
 ]
