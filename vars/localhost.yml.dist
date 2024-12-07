@@ -4,7 +4,7 @@ enable_xbox_controller: false
 
 autostart_chromecast_audio: false
 install_chromecast_audio: false
-mkchromecast_commit: fe7bd47fc0368bb70405bb6c55cd94bdb53a7091
+mkchromecast_commit: 28a0ea89bf890e02c3742fbcb654159a93f58e0e
 
 install_popcorntime: false
 popcorntime_version: 0.5.1
