@@ -120,7 +120,6 @@ graphical_apps: [
   "fontforge",
   "inkscape",
   "k3b",
-  "librecad",
   "libreoffice",
   "sound-juicer",
   "steam",
@@ -145,6 +144,7 @@ absent_flatpak_apps: [
   "net.pcsx2.PCSX2",
   "org.DolphinEmu.dolphin-emu",
   "org.freecad.FreeCAD",
+  "org.librecad.librecad",
   "org.libretro.RetroArch",
   "org.mixxx.Mixxx",
 ]
