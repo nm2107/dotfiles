@@ -62,6 +62,7 @@ packages_to_remove: [
 
 ### CLI tools
 cli_tools: [
+  "cdrskin",
   "curl",
   "dnf-plugins-core",
   "fastfetch",
