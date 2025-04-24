@@ -41,13 +41,6 @@ services_to_disable: [
 
 packages_to_remove: [
   "anaconda",
-  "anaconda-core",
-  "anaconda-gui",
-  "anaconda-live",
-  "anaconda-tui",
-  "anaconda-user-help",
-  "anaconda-widgets",
-  "ctags",
   "epiphany",
   "evolution",
   "gnome-software",
@@ -173,7 +166,7 @@ hardware_acceleration_packages: [
 ]
 
 printer_drivers: [
-#  "epson-inkjet-printer-escpr",
+#  "gutenprint-cups",
 ]
 
 ### Other switches
