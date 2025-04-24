@@ -21,7 +21,6 @@
   become: yes
   dnf:
     name: [
-      "Cadence",
       "qjackctl",
       "qpwgraph",
     ]
