@@ -139,6 +139,7 @@ absent_flatpak_apps: [
   "net.pcsx2.PCSX2",
   "org.DolphinEmu.dolphin-emu",
   "org.freecad.FreeCAD",
+  "org.kde.subtitlecomposer",
   "org.librecad.librecad",
   "org.libretro.RetroArch",
   "org.mixxx.Mixxx",
