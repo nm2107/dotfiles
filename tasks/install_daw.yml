@@ -7,7 +7,7 @@
     name: "{{ item }}"
     state: present
     method: system
-  when: install_daw | default(false)
+  when: install_daw | default(False)
   with_items:
     - "org.ardour.Ardour"
     - "org.freedesktop.LinuxAudio.Plugins.Calf/x86_64/25.08"
@@ -26,7 +26,7 @@
     ]
     state: present
     skip_broken: yes
-  when: install_daw | default(false)
+  when: install_daw | default(False)
   tags:
     - install_daw
 
@@ -34,10 +34,10 @@
 - name: Join audio group
   become: yes
   user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_facts['user_id'] }}"
     groups: audio
     append: yes
-  when: install_daw | default(false)
+  when: install_daw | default(False)
   tags:
     - install_daw
 
@@ -50,6 +50,6 @@
     mode: 0644
     owner: root
     group: root
-  when: install_daw | default(false)
+  when: install_daw | default(False)
   tags:
     - install_daw

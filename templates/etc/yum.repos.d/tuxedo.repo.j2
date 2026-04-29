@@ -3,8 +3,8 @@
 
 [tuxedo]
 name=tuxedo
-baseurl=https://rpm.tuxedocomputers.com/fedora/{{ ansible_distribution_major_version }}/x86_64/base
+baseurl=https://rpm.tuxedocomputers.com/fedora/{{ ansible_facts['distribution_major_version'] }}/x86_64/base
 enabled=1
 gpgcheck=1
-gpgkey=https://rpm.tuxedocomputers.com/fedora/{{ ansible_distribution_major_version }}/0x54840598.pub.asc
+gpgkey=https://rpm.tuxedocomputers.com/fedora/{{ ansible_facts['distribution_major_version'] }}/0x54840598.pub.asc
 skip_if_unavailable=False

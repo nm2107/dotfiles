@@ -23,7 +23,7 @@
       "moby-engine",
     ]
     state: present
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
 
@@ -32,17 +32,17 @@
   group:
     name: docker
     state: present
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
 
 - name: Join docker group
   become: yes
   user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_facts['user_id'] }}"
     groups: docker
     append: yes
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
 
@@ -51,7 +51,7 @@
   systemd:
     name: docker
     enabled: yes
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
 
@@ -68,7 +68,7 @@
     src: etc/sysconfig/docker
     dest: /etc/sysconfig/docker
   notify: restart docker
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
     - copy_docker_options
@@ -85,7 +85,7 @@
     line: '\1 systemd.unified_cgroup_hierarchy=0"'
     backrefs: yes
   notify: dump grub config
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
     - disable_cgroupsv2
@@ -101,7 +101,7 @@
     regexp: '^hosts\:'
     line: "hosts:      files dns myhostname"
   notify: restart docker
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
     - configure_container_dns
@@ -123,7 +123,7 @@
     regexp: '^FirewallBackend\='
     line: "FirewallBackend=iptables"
   notify: restart firewalld
-  when: install_docker | default(false)
+  when: install_docker | default(False)
   tags:
     - install_docker
     - configure_firewalld

@@ -1,13 +1,13 @@
 ---
-install_tuxedo_keyboard: false
-enable_xbox_controller: false
+install_tuxedo_keyboard: False
+enable_xbox_controller: False
 
-autostart_chromecast_audio: false
-install_chromecast_audio: false
-mkchromecast_commit: 28a0ea89bf890e02c3742fbcb654159a93f58e0e
+autostart_chromecast_audio: False
+install_chromecast_audio: False
+mkchromecast_commit: "28a0ea89bf890e02c3742fbcb654159a93f58e0e"
 
-install_popcorntime: false
-popcorntime_version: 0.5.1
+install_popcorntime: False
+popcorntime_version: "0.5.1"
 
 git_user_name: "John Doe"
 git_user_email: "you@mail.com"
@@ -20,10 +20,10 @@ git_sendemail_smtpencryption: "tls"
 git_sendemail_smtpserverport: "587"
 
 mountpoints: [
-# {path: "/mountpoint", src: "UUID=abcd-1234", fstype: "ext4", opts: "defaults", dump: 1, passno: 2},
+# {path: "/mountpoint", src: "UUID=abcd-1234", fstype: "ext4", opts: "defaults", dump: "1", passno: "2"},
 ]
 
-pipewire_default_clock_rate: 48000
+pipewire_default_clock_rate: "48000"
 # space separated values
 pipewire_default_clock_allowed_rates: "44100 48000 96000"
 
@@ -90,11 +90,11 @@ cli_tools: [
   "vim-enhanced",
   "wget",
 ]
-install_git_standup: false
-install_yq: false
+install_git_standup: False
+install_yq: False
 
-install_terraform: false
-terraform_binary_path: /usr/local/bin/terraform
+install_terraform: False
+terraform_binary_path: "/usr/local/bin/terraform"
 terraform_version: "0.12.21"
 terraform_archive_sha256sum: "ca0d0796c79d14ee73a3d45649dab5e531f0768ee98da71b31e423e3278e9aa9"
 terraform_binary_sha256sum: "6283aebb8cd0189adf95a4a1ca11f62079ea6148ac2c69bcd6fdbb2b7401662c"
@@ -128,7 +128,6 @@ graphical_apps: [
 
 ### Flatpak apps
 present_flatpak_apps: [
-  "org.audacityteam.Audacity",
 ]
 
 absent_flatpak_apps: [
@@ -138,6 +137,7 @@ absent_flatpak_apps: [
   "com.slack.Slack",
   "com.sweethome3d.Sweethome3d",
   "net.pcsx2.PCSX2",
+  "org.audacityteam.Audacity",
   "org.DolphinEmu.dolphin-emu",
   "org.freecad.FreeCAD",
   "org.kde.subtitlecomposer",
@@ -174,21 +174,21 @@ printer_drivers: [
 
 ### Other switches
 
-install_daw: false
-install_docker: false
-install_nodejs: false
-install_php: false
-install_podman: false
-install_python_lsp: false
-install_rust: false
-install_vagrant: false
+install_daw: False
+install_docker: False
+install_nodejs: False
+install_php: False
+install_podman: False
+install_python_lsp: False
+install_rust: False
+install_vagrant: False
 
 # see /etc/selinux/config for possible selinux statuses
-selinux_status: enforcing
+selinux_status: "enforcing"
 
 # set it to 'hidden' with a timeout of 0 to hide grub menu
 # @see https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html
-grub_timeout_style: menu
-grub_timeout: 10
+grub_timeout_style: "menu"
+grub_timeout: "10"
 
-swappiness: 10
+swappiness: "10"

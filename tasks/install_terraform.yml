@@ -4,7 +4,7 @@
     path: "{{ terraform_binary_path }}"
     checksum_algorithm: sha256
   register: binary
-  when: install_terraform | default(false)
+  when: install_terraform | default(False)
   tags:
     - install_cli_tools
     - install_terraform
@@ -14,7 +14,7 @@
   file:
     path: "{{ terraform_binary_path }}"
     state: absent
-  when: install_terraform | default(false) and (binary.stat.exists == True and binary.stat.checksum != terraform_binary_sha256sum)
+  when: install_terraform | default(False) and (binary.stat.exists == True and binary.stat.checksum != terraform_binary_sha256sum)
   tags:
     - install_cli_tools
     - install_terraform
@@ -28,7 +28,7 @@
     mode: 0644
     owner: root
     group: root
-  when: install_terraform | default(false) and (binary.stat.exists == False or binary.stat.checksum != terraform_binary_sha256sum)
+  when: install_terraform | default(False) and (binary.stat.exists == False or binary.stat.checksum != terraform_binary_sha256sum)
   register: terraform_archive_downloaded
   notify: remove terraform temporary files
   tags:

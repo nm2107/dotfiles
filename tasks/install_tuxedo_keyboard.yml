@@ -19,6 +19,7 @@
       "tuxedo-drivers",
     ]
     state: present
+    update_cache: yes
   when: install_tuxedo_keyboard
   tags:
     - install_tuxedo_keyboard

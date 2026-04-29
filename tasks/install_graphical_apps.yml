@@ -10,7 +10,7 @@
 - name: Join wireshark group
   become: yes
   user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_facts['user_id'] }}"
     groups: wireshark
     append: yes
   when: "'wireshark' in graphical_apps | default([])"

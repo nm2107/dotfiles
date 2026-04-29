@@ -10,7 +10,7 @@
 - name: Set zsh as user shell
   become: yes
   user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_facts['user_id'] }}"
     shell: /bin/zsh
   tags:
     - install_zsh
