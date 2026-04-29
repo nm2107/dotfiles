@@ -8,7 +8,7 @@
       "podman-compose",
     ]
     state: present
-  when: install_podman | default(false)
+  when: install_podman | default(False)
   tags:
     - install_podman
 
@@ -18,7 +18,7 @@
     src: usr/bin/docker
     dest: /usr/bin/docker
     mode: 0755
-  when: install_podman | default(false)
+  when: install_podman | default(False)
   tags:
     - install_podman
 
@@ -28,7 +28,7 @@
     src: usr/bin/docker-compose
     dest: /usr/bin/docker-compose
     mode: 0755
-  when: install_podman | default(false)
+  when: install_podman | default(False)
   tags:
     - install_podman
 
@@ -39,7 +39,7 @@
   copy:
     src: etc/containers/nodocker
     dest: /etc/containers/nodocker
-  when: install_podman | default(false)
+  when: install_podman | default(False)
   tags:
     - install_podman
 
@@ -51,6 +51,6 @@
     mode: 0644
     owner: root
     group: root
-  when: install_podman | default(false)
+  when: install_podman | default(False)
   tags:
     - install_podman

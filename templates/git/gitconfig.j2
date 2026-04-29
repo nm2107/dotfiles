@@ -6,7 +6,7 @@
 [push]
     default = matching
 [core]
-    excludesfile = /home/{{ ansible_user_id }}/.gitignore_global
+    excludesfile = /home/{{ ansible_facts['user_id'] }}/.gitignore_global
     editor = {{ git_core_editor }}
 [rerere]
     # If, like me, you like rerere, decomment these
