@@ -9,6 +9,9 @@ mkchromecast_commit: "28a0ea89bf890e02c3742fbcb654159a93f58e0e"
 install_popcorntime: False
 popcorntime_version: "0.5.1"
 
+install_cadcraft: False
+cadcraft_version: "0.14.0"
+
 git_user_name: "John Doe"
 git_user_email: "you@mail.com"
 git_core_editor: "nano"
