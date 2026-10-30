@@ -1,0 +1,22 @@
+- name: Install CADCraft
+  become: yes
+  dnf:
+    name: [
+      "https://github.com/storytold/cadcraft/releases/download/v{{ cadcraft_version }}/cadcraft-{{ cadcraft_version }}-linux-x86_64.rpm",
+    ]
+    state: present
+    disable_gpg_check: yes
+  when: install_cadcraft | default(False)
+  tags:
+    - install_cadcraft
+
+- name: Make sure CADCraft is not installed
+  become: yes
+  dnf:
+    name: [
+      "cadcraft",
+    ]
+    state: absent
+  when: not install_cadcraft | default(False)
+  tags:
+    - install_cadcraft
