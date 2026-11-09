@@ -10,7 +10,7 @@ install_popcorntime: False
 popcorntime_version: "0.5.1"
 
 install_cadcraft: False
-cadcraft_version: "0.14.0"
+cadcraft_version: "0.18.0"
 
 git_user_name: "John Doe"
 git_user_email: "you@mail.com"
@@ -160,8 +160,8 @@ gnome_deps: [
   "gnome-extensions-app",
   "gnome-terminal-nautilus",
   "gnome-tweaks",
-  "numix-icon-theme",
-  "numix-icon-theme-circle",
+  # "numix-icon-theme",
+  # "numix-icon-theme-circle",
 ]
 
 # @see https://wiki.archlinux.org/title/Hardware_video_acceleration
