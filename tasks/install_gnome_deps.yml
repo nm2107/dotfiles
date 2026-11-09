@@ -1,6 +1,7 @@
 ---
 - name: Install gnome deps
   become: yes
+  ignore_errors: yes
   dnf:
     name: "{{ gnome_deps | default([]) }}"
     state: present
