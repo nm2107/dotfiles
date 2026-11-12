@@ -10,7 +10,7 @@ install_popcorntime: False
 popcorntime_version: "0.5.1"
 
 install_cadcraft: False
-cadcraft_version: "0.18.0"
+cadcraft_version: "0.20.1"
 
 git_user_name: "John Doe"
 git_user_email: "you@mail.com"
